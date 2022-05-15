@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/media/tasa_logo.svg">
+
+    <!-- specific code -->
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+
+    <!-- elements and question creation -->
+    <script src="generic.js"></script>
+    <script src="completeSentences.js"></script>
+
+    <!-- dragging -->
+    <script src="drag.js"></script>
+    <!-- phone drag -->
+    <script src="dragDropTouch.js"></script> 
+
+    <title>פאזל</title>
+  </head>
+  <body>
+    <div id="main" class="background">
+
+        <!-- loader -->
+        <div class="loader">
+          <img src="assets/media/center and mask.gif" alt="Loading..." />
+        </div>
+
+        <div class="header">
+          <img src="assets/media/tasa_logo.svg" alt="logo" class="logo">
+        </div>
+
+        <!-- opening -->
+        <div id="opening" class="page background">
+          <div class="container">
+            <div class="instructions bold horizon-center">הכניסו את הקוד להתחלת המשימה לבניית החללית</div>
+            <input class="center" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" placeholder="הכניסו קוד">
+          </div>
+        </div>
+
+        <!-- mission -->
+        <div id="mission" class="page background">
+            <div class="container">
+            <div class="instructions bold horizon-center">שחררו את חלקי החללית בעזרת מענה על תשובות נכונות ואז הרכיבו אותם לפי המקום הנכון</div>
+            <div id="puzzle" class="background flex center">
+              <!-- <div class="drop" data-num="1"></div>
+              <div class="drop" data-num="2"></div>
+              <div class="drop" data-num="3"></div>
+              <div class="drop" data-num="4"></div>
+              <div class="drop" data-num="5"></div>
+              <div class="drop" data-num="6"></div> -->
+            </div>
+            <div id="pieces" class="flex horizon-center">
+                <!-- <div draggable="false" class="drag" data-num="1">
+                  <div class="background lock"></div>
+                </div>
+                <div draggable="false" class="drag" data-num="2">
+                  <div class="background lock"></div>
+                </div>
+                <div draggable="false" class="drag" data-num="3">
+                  <div class="background lock"></div>
+                </div>
+                <div draggable="false" class="drag" data-num="4">
+                  <div class="background lock"></div>
+                </div>
+                <div draggable="false" class="drag" data-num="5">
+                  <div class="background lock"></div>
+                </div>
+                <div draggable="false" class="drag" data-num="6">
+                  <div class="background lock"></div>
+                </div> -->
+            </div>
+            <div class="completeSentenceContainer center">
+            </div>
+          </div>
+        </div>
+
+        <img id="rocket" class="horizon-center" src="assets/media/spaceship.svg" alt="טיל">
+
+    </div>   
+  </body>
