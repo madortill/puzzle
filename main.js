@@ -29,14 +29,22 @@ loadMission = () => {
     setDrop();
 
     let lock;
-    let drop
+    let ArrLocks = [];
     for (let i = 1; i <= 9; i++) {
+        // drag
         lock = El("div", {classes: [`drag`, `background`], attributes: {"data-num": i, "draggable" : "false"}}, 
         El("div", {classes: [`background`, `lock`], listeners: {click : question}}));
-        document.querySelector(`#pieces`).append(lock);
+        ArrLocks.push(lock); 
         lock.style.backgroundImage = `url(assets/media/puzzle_${i}.svg)`;
+        // drop
         drop = El("div", {classes: [`drop`, `flex`], attributes: {"data-num": i}});
         document.querySelector(`#puzzle`).append(drop);
+    }
+    let random;
+    for (let i = 1; i <= 9; i++) {
+        random = Math.floor(Math.random() * ArrLocks.length);
+        document.querySelector(`#pieces`).append(ArrLocks[random]);
+        ArrLocks.splice(random, 1);
     }
     // document.querySelectorAll('.lock').forEach((lock) => {
     //     lock.addEventListener('click', question);
