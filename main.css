@@ -4,6 +4,13 @@
     font-weight: 500;
 }
 
+@font-face {
+    font-family: Assistant;
+    src: url(assets/fonts/Assistant-Light.ttf);
+    font-weight: 500;
+}
+
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -149,7 +156,7 @@ body, #main {
     position: fixed;
     width: 18vw;
     top: 1vh;
-    height: 7vh;
+    /* height: 7vh; */
     left: 1vw;
 }
 
@@ -161,6 +168,65 @@ body, #main {
     display: flex;
     align-content: center;
     flex-wrap: wrap;
+    z-index: 5;
+}
+
+/* about */
+
+.body-odot {
+    position: absolute;
+    top: 5vh;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.odot-logo {
+    position: fixed;
+    width: 10vw;
+    top: 1vh;
+    /* height: 3.5vh; */
+    right: 1vw;
+    display: block;
+}
+
+.div-odot {
+    display: none;
+    position: absolute;
+    top: 5vh;
+    width: 100%;
+    height: 90vh;
+}
+
+.p-odot {
+    margin: 0.5em;
+}
+
+.div-p-odot {
+    font-family: Assistant;
+    font-size: 0.8em;
+}
+
+.till-logo {
+    width: 23vW;
+    height: auto;
+}
+
+.back-button {
+    position: absolute;
+    bottom: 5vh;
+    width: 18vw;
+    right: 2vh;
+    z-index: 5;
+}
+
+.div-middle {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    margin-right: 0em;
+    margin-top: 2em;
+    justify-content: space-around;
 }
 
 /* opening */
@@ -245,9 +311,10 @@ margin-top: 14vw;margin-right: 10vw;}
     padding: 0.4em;
 }
 
-.checkButtonSentence{
+.checkButtonSentence {
     position: absolute;
     bottom: 0;
+    background-size: 100% 100%;
 }
 
 .completeSentenceContainer {
