@@ -19,6 +19,7 @@ checkCode = () => {
             // move to the mission
             loadMission();
         });
+        addAnimation(document.querySelector(".odot-logo"), "fade-out", 1500, 500);
         input.style.borderColor = "rgb(32, 219, 159)";
     }
 }
@@ -90,14 +91,12 @@ closeWindow = (event) => {
 //    });
 }
 
+let countDrag = 0;
 // after an item has been dropped correctly
 onDrop = (drag, drop) => {
     drag.setAttribute("draggable", "false");
+    countDrag++;
+    if (countDrag === document.querySelectorAll('.drag').length) {
+        document.querySelector('#mission .instructions').innerHTML = "כל הכבוד! חשפתם את המספר הבא!"
+    }
 }
-
-
-
-
-
-
-
