@@ -4,13 +4,16 @@ const code = "0000";
 window.addEventListener('load', () => {
     document.querySelector(".loader").classList.add("fade");
     document.querySelector('input').addEventListener('input', checkCode);
+    document.querySelector(".odot-logo").addEventListener("click", odot);
 });
 
 // check if the user can start the mission
 checkCode = () => {
     let input = document.querySelector('input');
+    
     // if the code is correct
     if (input.value === code) {
+        document.querySelector('input').removeEventListener('input', checkCode);
         // style
         addAnimation(document.querySelector('#opening'), "fade-out", 1500, 500, function() {
             // move to the mission
