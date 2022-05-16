@@ -191,3 +191,21 @@ addAnimation = (element, animation, time, delay, callback) => {
     element.style.cssText = `animation-duration: ${time}ms; animation-delay: ${delay}ms;`;
     setTimeout(callback, time + delay - 100);
 }
+
+let strLocation = "front-div";
+
+// פונקציה האחראית על פתיחת האודות
+let odot = () => {
+    document.querySelector(`.${strLocation}`).style.display = "none";
+    document.querySelector(`.div-odot`).style.display = "block";  
+    // document.querySelector(`.div-body`).style.overflow = "hidden";
+    document.querySelector(`.odot-logo`).style.display = "none";  
+    // document.querySelector(`.title`).innerHTML = "אודות";
+    document.querySelector(`#back-button-odot`).addEventListener("click", () => {
+        document.querySelector(`.${strLocation}`).style.display = "block";
+        document.querySelector(`.div-odot`).style.display = "none";  
+        document.querySelector(`.odot-logo`).style.display = "block";  
+        // document.querySelector(`.div-body`).style.overflow = "scroll";
+        // document.querySelector(`.title`).innerHTML = "כותרת";
+    })
+}
