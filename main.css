@@ -251,7 +251,7 @@ input {
 
 #puzzle {
     width: 60vw;
-    height: 27vh;
+    height: 25vh;
     flex-wrap: wrap;
     justify-content: center;
     border-style: dashed;
@@ -267,15 +267,15 @@ input {
 
 .drop {
     background-color: transparent;
-/* border-style: dashed; *//* border-color: white; *//* border-width: medium; */}
+/* border-style: dashed; *//* border-color: white; *//* border-width: medium; */height: 8vh;}
 
 /* .drag {
     background-color: brown;
 } */
 
 .lock {
-    width: 13vw;
-    height: 7vh;
+    width: 15vw;
+    height: 9vh;
     background-image: url(assets/media/locked_lock.png);
     position: relative;
     margin: auto;
