@@ -280,7 +280,18 @@ input {
     position: relative;
     margin: auto;
     background-size: 100% 100%;
-/* display: none; */}
+    /* display: none; */
+    /* max-width: 230px; */
+    /* max-height:95px; */
+    /* width: auto; */
+    /* height: auto; */
+    /* object-fit: cover; */
+    /* width: 100%; */
+    /* height: 54px; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
 
 .piece {
     width: 10vw;
@@ -349,7 +360,7 @@ margin-top: 14vw;margin-right: 10vw;}
 }
 
 .dropDownTitle {
-    width: 38vw;
+    width: 38.5vw;
     padding: 1vw 0;
 }
 

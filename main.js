@@ -80,6 +80,7 @@ const questionsEnd = () => {
     // display lock
     currLock.style.display = "none";
     currLock.parentElement.setAttribute("draggable", "true");
+    setTimeout(closeWindow, 1000);
 }
 
 closeWindow = (event) => {
